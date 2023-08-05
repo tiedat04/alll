@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>TienDat</title>
+		<meta name="Keywords" content="ThanhDieu.Com"/>
+		<meta name="Description" content="ThanhDieu.Com"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="ok.js"></script>
+           
+	</head>
+	<body>
+	
+		
+		<div class="wrap">
+			<div class="content">
+				<div class="avatar">
+					<img src="img/avatar.jpg">
+					<h2>TienDat</h2>
+				</div>
+				<div class="btns">
+					<a href="https://tiedat04.github.io/in4/" target="_blank">
+						<p>Profile #1</p>
+					</a>
+					<a href="https://tiedat04.github.io/thoitiet/" target="_blank">
+						<p>Thời Tiết</p>
+					</a>
+					<a href="https://tiedat04.github.io/i4-res/" target="_blank">
+						<p>Profile #2</p>
+					</a>
+					<a href="https://tiedat04.github.io/profile/" target="_blank">
+						<p>Profile #3</p>
+					</a>
+					<a href="https://tiedat04.github.io/pro9/" target="_blank">
+						<p>Profile #4</p>
+					</a>
+					<a href="https://tiedat04.github.io/p5/" target="_blank">
+						<p>Profile #5</p>
+					</a>
+					<a href="https://tiedat04.github.io/f4/" target="_blank">
+						<p>Profile #6</p>
+					</a>
+					<a href="https://tiedat04.github.io/timm/" target="_blank">
+						<p>Tym</p>
+					</a>
+				</a>
+				<a href="https://www.teentinhte.com/2023/04/nguyen-tien-at-chang-trai-tre-sinh-nam.html?m=1" target="_blank">
+					<p>Báo Nè</p>
+				</a>
+			</a>
+			<a href="https://www.mediafire.com/file/3nlrpggs4873oxt/App+Spam+SMS,+CALL+Số+Điện+Thoại+-+1.0.1.apk/file" target="_blank">
+				<p>App Spam Nè</p>
+			</a>
+				</div>
+				<div class="btns bottomBtns">
+					<a href="https://facebook./datyeuems1" target="_blank">
+						<p>Facebook</p>
+					</a>
+					<a href="https://m.me/datyeuems1" target="_blank">
+						<p>Messenger</p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<audio controls  id="audio-player">
+			<source src="nhac/music.mp3" type="audio/mpeg">
+		
+		  <div id="controls">
+			<button onclick="playPreviousSong()">Lại Nào</button>
+			<button onclick="togglePlayPause()">Quất or Nghỉ</button>
+			<button onclick="playNextSong()">Khác đê</button>
+		  </div>
+		
+		  <script>
+			const songs = [
+			  'nhac/s1.mp3',
+			  'nhac/s2.mp3',
+			  'nhac/s3.mp3',
+			  'nhac/s4.mp3',
+			  'nhac/s5.mp3',
+			  'nhac/s6.mp3',
+			];
+
+		
+			let currentSongIndex = 0;
+			const audioPlayer = document.getElementById('audio-player');
+			
+			// Hàm phát hoặc dừng nhạc khi click vào nút "Phát/Pause"
+			function togglePlayPause() {
+			  if (audioPlayer.paused) {
+				audioPlayer.play();
+			  } else {
+				audioPlayer.pause();
+			  }
+			}
+		
+			// Hàm phát bài hát kế tiếp
+			function playNextSong() {
+			  currentSongIndex = (currentSongIndex + 1) % songs.length;
+			  audioPlayer.src = songs[currentSongIndex];
+			  audioPlayer.play();
+			}
+		
+			// Hàm phát bài hát trước đó
+			function playPreviousSong() {
+			  currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+			  audioPlayer.src = songs[currentSongIndex];
+			  audioPlayer.play();
+			}
+		
+			// Gọi hàm phát bài hát kế tiếp khi bài hát hiện tại kết thúc
+			audioPlayer.addEventListener('ended', playNextSong);
+		  </script>
+	</body>
+</html>
